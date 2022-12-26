@@ -43,10 +43,11 @@ def build_dataloader(dataset_cfg, class_names, batch_size, dist, root_path=None,
     dataset = __all__[dataset_cfg.DATASET](
         dataset_cfg=dataset_cfg,
         class_names=class_names,
-        root_path='/content/drive/MyDrive/Graduation_Project/ObjectDetection3D/data_object_velodyne/',
+        root_path=root_path,
         training=training,
         logger=logger,
     )
+    print(f'Root path is {root_path}')
 
     if merge_all_iters_to_one_epoch:
         assert hasattr(dataset, 'merge_all_iters_to_one_epoch')
