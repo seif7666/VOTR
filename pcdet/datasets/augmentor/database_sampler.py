@@ -15,7 +15,7 @@ class DataBaseSampler(object):
             self.db_infos[class_name] = []
 
         for db_info_path in sampler_cfg.DB_INFO_PATH:
-            db_info_path = self.root_path.resolve() / db_info_path
+            db_info_path = '/content/drive/MyDrive/Graduation_Project/ObjectDetection3D/data_object_velodyne/kitti_infos_train.pkl'
             print(db_info_path)
             with open(str(db_info_path), 'rb') as f:
                 infos = pickle.load(f)
