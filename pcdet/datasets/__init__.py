@@ -43,7 +43,7 @@ def build_dataloader(dataset_cfg, class_names, batch_size, dist, root_path=None,
     dataset = __all__[dataset_cfg.DATASET](
         dataset_cfg=dataset_cfg,
         class_names=class_names,
-        root_path=root_path,
+        root_path='/content/drive/MyDrive/Graduation_Project/ObjectDetection3D/data_object_velodyne/',
         training=training,
         logger=logger,
     )

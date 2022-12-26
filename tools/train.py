@@ -113,7 +113,7 @@ def main():
 
     # -----------------------create dataloader & network & optimizer---------------------------
     train_set, train_loader, train_sampler = build_dataloader(
-        dataset_cfg='drive/MyDrive/Graduation_Project/ObjectDetection3D/data_object_velodyne/',
+        dataset_cfg=cfg.DATA_CONFIG,
         class_names=cfg.CLASS_NAMES,
         batch_size=args.batch_size,
         dist=dist_train, workers=args.workers,
