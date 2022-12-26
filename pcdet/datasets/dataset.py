@@ -17,7 +17,8 @@ class DatasetTemplate(torch_data.Dataset):
         self.training = training
         self.class_names = class_names
         self.logger = logger
-        self.root_path = root_path if root_path is not None else Path(self.dataset_cfg.DATA_PATH)
+        self.root_path = root_path if root_path is not None else Path('/content/drive/MyDrive/Graduation_Project/ObjectDetection3D/data_object_velodyne')
+        print(self.root_path)
         self.logger = logger
         if self.dataset_cfg is None or class_names is None:
             return
